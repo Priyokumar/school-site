@@ -1,0 +1,15 @@
+@import '../../../styles/variable.scss';
+
+
+.container1{
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    background-color: $ct-dark-gray;
+    color: $ct-white;
+    p{
+        font-style: italic;
+        padding: 0;
+        color: rgb(153, 152, 152);
+    }
+}
