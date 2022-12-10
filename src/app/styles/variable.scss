@@ -1,0 +1,324 @@
+$font-default: "Montserrat-Regular", Helvetica, Arial, sans-serif;
+$font-semibold: "Montserrat-SemiBold", Helvetica, Arial, sans-serif;
+$font-bold: "Montserrat-Bold", Helvetica, Arial, sans-serif;
+$ct-blue: #000080;
+$ct-gray: #9f9f9f;
+$ct-dark-gray: #333333;
+$ct-dark-gray-opacity: #33333380;
+$ct-white: #ffffff;
+$ct-red: #e56464;
+$ct-orange: #fe6e00;
+$ct-blueClr: #133280;
+$ct-goldenClr: #d7ab48;
+$ct-grayBg: #153862;
+$successMsg: #155724;
+$errorMsg: #dc3545;
+$ct-mainBg: #929faf;
+$ct-mainBg: #f5f7fb;
+$ct-inputBg: #f5f7fb;
+$ct-green: #5fb970;
+$ct-light-gray: #bcc4cc;
+$ct-checkbox-border: #707070;
+$ct-jobDate-color: #8a8b94;
+$ct-task-color: #5fb970;
+$ct-del-btn: #ff0202;
+$ct-doc-del-btn: #ea0000;
+$ct-border-color: #f5f7fb;
+$ct-green-online: #27e37f;
+$ct-activeNav: #f3e5c6;
+
+$minbigscreen: 1601px;
+$mindesktop: 1401px;
+
+$maxlaptop: 1400px;
+$minlaptop: 1200px;
+
+$maxipadpro1: 1199px;
+$minipadpro1: 992px;
+
+$maxipadpro: 991px;
+$minipadpro: 921px;
+
+$maxipad: 920px;
+$minipad: 768px;
+
+$maxtablet: 767px;
+$mintablet: 481px;
+
+$maxmobile: 480px;
+$minmobile: 320px;
+
+$maxnavbar: 991px;
+
+$maxmobsidenav: 767px;
+$minmobsidenav: 320px;
+
+@mixin mobsidenav {
+  @media (max-width: #{$maxmobsidenav}) and (min-width: #{$minmobsidenav}) {
+    @content;
+  }
+}
+
+$minbigsidenav: 768px;
+
+@mixin bigsidenav {
+  @media (min-width: #{$minbigsidenav}) {
+    @content;
+  }
+}
+
+@mixin navbar {
+  @media (max-width: #{$maxnavbar}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$mindesktop}) {
+    @content;
+  }
+}
+
+@mixin bigscreen {
+  @media (min-width: #{$minbigscreen}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$maxlaptop}) and (min-width: #{$minlaptop}) {
+    @content;
+  }
+}
+
+@mixin ipadpro1 {
+  @media (max-width: #{$maxipadpro1}) and (min-width: #{$minipadpro1}) {
+    @content;
+  }
+}
+
+@mixin ipadpro {
+  @media (max-width: #{$maxipadpro}) and (min-width: #{$minipadpro}) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (max-width: #{$maxipad}) and (min-width: #{$minipad}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$maxtablet}) and (min-width: #{$mintablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$maxmobile}) and (min-width: #{$minmobile}) {
+    @content;
+  }
+}
+
+@mixin ipadproTOmob {
+  @media (max-width: #{$maxipadpro}) and (min-width: #{$minmobile}) {
+    @content;
+  }
+}
+
+@mixin tabTOmob {
+  @media (max-width: #{$maxtablet}) and (min-width: #{$minmobile}) {
+    @content;
+  }
+}
+
+@mixin font18responsive() {
+  font-size: 1.125rem;
+  @include laptop() {
+    font-size: 1.09375rem;
+  }
+  @include ipadpro1() {
+    font-size: 1.0625rem;
+  }
+  @include ipadpro() {
+    font-size: 1.03125rem;
+  }
+  @include ipad() {
+    font-size: 1rem;
+  }
+  @include tablet() {
+    font-size: 0.96875rem;
+  }
+  @include mobile() {
+    font-size: 0.9375rem;
+  }
+}
+
+@mixin font20responsive() {
+  font-size: 1.25rem;
+  @include laptop() {
+    font-size: 1.219rem;
+  }
+  @include ipadpro1() {
+    font-size: 1.1875rem;
+  }
+  @include ipadpro() {
+    font-size: 1.15625rem;
+  }
+  @include ipad() {
+    font-size: 1.125rem;
+  }
+  @include tablet() {
+    font-size: 1.09375rem;
+  }
+  @include mobile() {
+    font-size: 1.0625rem;
+  }
+}
+
+@mixin font24responsive() {
+  font-size: 1.5rem;
+  @include laptop() {
+    font-size: 1.4375rem;
+  }
+  @include ipadpro1() {
+    font-size: 1.375rem;
+  }
+  @include ipadpro() {
+    font-size: 1.3125rem;
+  }
+  @include ipad() {
+    font-size: 1.25rem;
+  }
+  @include tablet() {
+    font-size: 1.1875rem;
+  }
+  @include mobile() {
+    font-size: 1.125rem;
+  }
+}
+
+@mixin font32responsive() {
+  font-size: 2rem;
+  @include laptop() {
+    font-size: 1.875rem;
+  }
+  @include ipadpro1() {
+    font-size: 1.75rem;
+  }
+  @include ipadpro() {
+    font-size: 1.625rem;
+  }
+  @include ipad() {
+    font-size: 1.5rem;
+  }
+  @include tablet() {
+    font-size: 1.375rem;
+  }
+  @include mobile() {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin notifnCommonCss {
+  background-color: $ct-blue;
+  color: $ct-white;
+  height: 25px;
+  width: 25px;
+  padding: 3px;
+  margin: 0 15px 0 auto;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+@mixin customScrollBar {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.3rem;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+@mixin customGoldenCheckBox($top, $left) {
+  .checkbox {
+    position: relative;
+    display: block;
+    label {
+      position: relative;
+      min-height: 34px;
+      display: block;
+      padding-left: 30px;
+      margin-bottom: 0;
+      font-weight: normal;
+      cursor: pointer;
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 22px;
+        height: 22px;
+        transition: transform 0.28s ease;
+        border-radius: 3px;
+        border: 2px solid $ct-goldenClr;
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 6px;
+        border-bottom: 2px solid $ct-goldenClr;
+        border-left: 2px solid $ct-goldenClr;
+        transform: rotate(-45deg) scale(0);
+        transition: transform ease 0.25s;
+        position: absolute;
+        top: 7px;
+        left: 6px;
+      }
+    }
+    input[type="checkbox"] {
+      width: auto;
+      opacity: 0.00000001;
+      position: absolute;
+      left: 0;
+      &:checked ~ label {
+        &:before {
+          border: 2px solid $ct-goldenClr;
+        }
+        &:after {
+          transform: rotate(-45deg) scale(1.15);
+        }
+      }
+      &:focus + label::before {
+        outline: 0;
+      }
+    }
+  }
+}

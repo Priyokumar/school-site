@@ -1,0 +1,21 @@
+<section class="navigation">
+    <div class="nav-container">
+        <div class="brand">
+            <h2>Demo School </h2>
+        </div>
+        <nav>
+            <div class="nav-mobile">
+                <a  id="nav-toggle" (click)="openMenu()"><span></span></a>
+            </div>
+            <ul class="nav-list" [ngClass]="{'show':toggle, 'hide':!toggle}">
+                <li routerLink="home">Home</li>
+                <li routerLink="about">About Us</li>
+                <li routerLink="admission">Admission</li>
+                <li routerLink="notification">Notification</li>
+                <li routerLink="contact">Contact Us</li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- id="nav-toggle" href="#!" -->
