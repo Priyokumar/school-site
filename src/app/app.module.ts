@@ -10,6 +10,10 @@ import { AdmissionComponent } from './pages/admission/admission.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotificationComponent } from './pages/notification/notification.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule  } from "@angular/material/toolbar";
+import { MatIconModule  } from "@angular/material/icon";
+import { MatButtonModule  } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { NotificationComponent } from './pages/notification/notification.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
