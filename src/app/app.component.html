@@ -1,5 +1,12 @@
-<app-header></app-header>
-<div class="layout">
-    <router-outlet></router-outlet>
-</div>
-<app-footer></app-footer>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="over" style="width: 256px;">
+        <app-sidenav [sideNavToggle]="drawer"></app-sidenav>
+    </mat-drawer>
+    <div class="layout">
+        <app-header [sideNavToggle]="drawer"></app-header>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</mat-drawer-container>

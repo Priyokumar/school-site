@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="toggle">
+    <button mat-icon-button class="icon-btn" (click)="sideNavToggle.toggle()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="content">
+    <button mat-button aria-label="Home link" routerLink="/home" routerLinkActive="active" (click)="sideNavToggle.toggle()">
+      <span>Home</span>
+    </button>
+    <button mat-button aria-label="About Us link" routerLink="/about" routerLinkActive="active" (click)="sideNavToggle.toggle()">
+      <span>About Us</span>
+    </button>
+    <button mat-button aria-label="Admission link" routerLink="/admission" routerLinkActive="active" (click)="sideNavToggle.toggle()">
+      <span>Admission</span>
+    </button>
+    <button mat-button aria-label="Contact Us link" routerLink="contact" routerLinkActive="active" (click)="sideNavToggle.toggle()">
+      <span>Contact Us</span>
+    </button>
+    <button mat-button aria-label="Notification link" routerLink="notification" routerLinkActive="active" (click)="sideNavToggle.toggle()">
+      <span>Notification</span>
+    </button>
+    <a href="https://admin.pesl.in" target="_blank" (click)="sideNavToggle.toggle()">
+      <button mat-button aria-label="Home link" class="admin-btn" href>
+          <span>Admin</span>
+          <mat-icon>open_in_new</mat-icon>
+      </button>
+    </a>
+  </div>
+</div>

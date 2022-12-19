@@ -1,21 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Subject, takeUntil } from 'rxjs';
+import { LayoutService } from 'src/app/services/layout.service';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  templateUrl: './header-mat.component.html',
+  styleUrls: ['./header-mat.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor() { }
+  @Input() sideNavToggle: any
+  scrSize$ = this.layoutService.scrSize
 
-  ngOnInit(): void {
-  }
-  toggle: boolean = false;
-  openMenu() {
-    this.toggle = !this.toggle;
-    console.log(this.toggle);
-
+  constructor(private layoutService: LayoutService){
   }
   
 }

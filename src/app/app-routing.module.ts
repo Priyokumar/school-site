@@ -9,15 +9,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotificationComponent } from './pages/notification/notification.component';
 const routes: Routes = [
 
-  { path: 'header', component: HeaderComponent },
-  { path: 'footer', component: FooterComponent },
+  { path: '', redirectTo:"/home", pathMatch:"full" },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'admission', component: AdmissionComponent },
   { path: 'notification', component: NotificationComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '', component: HomeComponent }
-
+  { path: 'contact', component: ContactComponent }
+  
 ];
 
 @NgModule({
