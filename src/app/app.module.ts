@@ -10,6 +10,9 @@ import { AdmissionComponent } from './pages/admission/admission.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotificationComponent } from './pages/notification/notification.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { SidenavComponent } from './core/components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { NotificationComponent } from './pages/notification/notification.compone
     AboutComponent,
     AdmissionComponent,
     NotificationComponent,
-    ContactComponent
+    ContactComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+.banner{
+    padding-left: 6px;
+    padding-top: 5px;
+}
+.icon-btn{
+    .mat-icon{
+        font-size: 30px;
+    }
+}
+a{
+    color: #fff;
+}
+.active{
+    border-bottom: 2px solid #fff;
+    background-color: #ed8db329;
+    border-radius: 0 !important;
+}
+.admin-btn{
+    position: relative;
+    .mat-icon{
+        position: absolute;
+        top: 5px;
+        right: -2px;
+        font-size: 12px;
+    }
+}

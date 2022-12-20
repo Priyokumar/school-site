@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button aria-label="Toggle icon"
+        *ngIf="(scrSize$ | async) === 'Small' || (scrSize$ | async) === 'XSmall'" (click)="sideNavToggle.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Icon" class="icon-btn">
+        <mat-icon>auto_stories</mat-icon>
+    </button>
+    <span class="banner">Public English School, Leishangthem</span>
+    <span class="spacer"></span>
+    <div *ngIf="(scrSize$ | async) === 'Large' || (scrSize$ | async) === 'XLarge'">
+        <button mat-button aria-label="Home link" routerLink="/home" routerLinkActive="active">
+            <span>Home</span>
+        </button>
+        <button mat-button aria-label="About Us link" routerLink="/about" routerLinkActive="active">
+            <span>About Us</span>
+        </button>
+        <button mat-button aria-label="Admission link" routerLink="/admission" routerLinkActive="active">
+            <span>Admission</span>
+        </button>
+        <button mat-button aria-label="Contact Us link" routerLink="contact" routerLinkActive="active">
+            <span>Contact Us</span>
+        </button>
+        <button mat-button aria-label="Notification link" routerLink="notification" routerLinkActive="active">
+            <span>Notification</span>
+        </button>
+        <a href="https://admin.pesl.in" target="_blank">
+            <button mat-button aria-label="Home link" class="admin-btn" href>
+                <span>Admin</span>
+                <mat-icon>open_in_new</mat-icon>
+            </button>
+        </a>
+    </div>
+</mat-toolbar>

@@ -1,4 +1,11 @@
+.mat-drawer-container{
+    height: 100vh;
+}
+
 .layout{
     width: 100%;
-    
+    min-height: 90vh;
+    .mat-drawer{
+        width: 256px;
+    }
 }
